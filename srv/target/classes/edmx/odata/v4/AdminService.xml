@@ -176,6 +176,12 @@
         <Property Name="descr" Type="Edm.String" MaxLength="1000"/>
         <Property Name="code" Type="Edm.String" Nullable="false"/>
       </EntityType>
+      <Annotations Target="AdminService.EntityContainer">
+        <Annotation Term="Core.Description" String="Service used by administrators to manage customers and incidents."/>
+      </Annotations>
+      <Annotations Target="AdminService.Customers">
+        <Annotation Term="Core.Description" String="Customers entitled to create support Incidents."/>
+      </Annotations>
       <Annotations Target="AdminService.Customers/createdAt">
         <Annotation Term="UI.HiddenFilter" Bool="true"/>
         <Annotation Term="UI.ExcludeFromNavigationContext" Bool="true"/>
@@ -209,6 +215,9 @@
       </Annotations>
       <Annotations Target="AdminService.Customers/creditCardNo">
         <Annotation Term="Validation.Pattern" String="^[1-9]\d{15}$"/>
+      </Annotations>
+      <Annotations Target="AdminService.Incidents">
+        <Annotation Term="Core.Description" String="Incidents created by Customers."/>
       </Annotations>
       <Annotations Target="AdminService.Incidents/ID">
         <Annotation Term="Core.ComputedDefaultValue" Bool="true"/>
@@ -282,6 +291,9 @@
           </Record>
         </Annotation>
       </Annotations>
+      <Annotations Target="AdminService.Addresses">
+        <Annotation Term="Core.Description" String="Aspect to capture changes by user and name&#xA;&#xA;See https://cap.cloud.sap/docs/cds/common#aspect-managed"/>
+      </Annotations>
       <Annotations Target="AdminService.Addresses/ID">
         <Annotation Term="Core.ComputedDefaultValue" Bool="true"/>
       </Annotations>
@@ -321,6 +333,7 @@
             </Record>
           </Collection>
         </Annotation>
+        <Annotation Term="Core.Description" String="Aspect for a code list with name and description&#xA;&#xA;See https://cap.cloud.sap/docs/cds/common#aspect-codelist"/>
       </Annotations>
       <Annotations Target="AdminService.Urgency/name">
         <Annotation Term="Common.Label" String="{i18n>Name}"/>
@@ -354,6 +367,7 @@
             </Record>
           </Collection>
         </Annotation>
+        <Annotation Term="Core.Description" String="Aspect for a code list with name and description&#xA;&#xA;See https://cap.cloud.sap/docs/cds/common#aspect-codelist"/>
       </Annotations>
       <Annotations Target="AdminService.Status/name">
         <Annotation Term="Common.Label" String="{i18n>Name}"/>
@@ -411,6 +425,7 @@
       </Annotations>
       <Annotations Target="AdminService.Urgency_texts/locale">
         <Annotation Term="Common.Label" String="{i18n>LanguageCode}"/>
+        <Annotation Term="Core.Description" String="Type for a language code"/>
       </Annotations>
       <Annotations Target="AdminService.Urgency_texts/name">
         <Annotation Term="Common.Label" String="{i18n>Name}"/>
@@ -438,6 +453,7 @@
       </Annotations>
       <Annotations Target="AdminService.Status_texts/locale">
         <Annotation Term="Common.Label" String="{i18n>LanguageCode}"/>
+        <Annotation Term="Core.Description" String="Type for a language code"/>
       </Annotations>
       <Annotations Target="AdminService.Status_texts/name">
         <Annotation Term="Common.Label" String="{i18n>Name}"/>

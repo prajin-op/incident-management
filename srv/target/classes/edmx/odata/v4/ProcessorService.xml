@@ -225,6 +225,9 @@
         <Parameter Name="PreserveChanges" Type="Edm.Boolean"/>
         <ReturnType Type="ProcessorService.Incidents"/>
       </Action>
+      <Annotations Target="ProcessorService.EntityContainer">
+        <Annotation Term="Core.Description" String="Service used by support personell, i.e. the incidents' 'processors'."/>
+      </Annotations>
       <Annotations Target="ProcessorService.Incidents">
         <Annotation Term="UI.FieldGroup" Qualifier="GeneratedGroup">
           <Record Type="UI.FieldGroupType">
@@ -326,6 +329,7 @@
             </PropertyValue>
           </Record>
         </Annotation>
+        <Annotation Term="Core.Description" String="Incidents created by Customers."/>
       </Annotations>
       <Annotations Target="ProcessorService.EntityContainer/Incidents">
         <Annotation Term="Common.DraftRoot">
@@ -457,6 +461,9 @@
       <Annotations Target="ProcessorService.Incidents/DraftAdministrativeData">
         <Annotation Term="UI.Hidden" Bool="true"/>
       </Annotations>
+      <Annotations Target="ProcessorService.Customers">
+        <Annotation Term="Core.Description" String="Customers entitled to create support Incidents."/>
+      </Annotations>
       <Annotations Target="ProcessorService.EntityContainer/Customers">
         <Annotation Term="Capabilities.DeleteRestrictions">
           <Record Type="Capabilities.DeleteRestrictionsType">
@@ -516,6 +523,7 @@
             </Record>
           </Collection>
         </Annotation>
+        <Annotation Term="Core.Description" String="Aspect for a code list with name and description&#xA;&#xA;See https://cap.cloud.sap/docs/cds/common#aspect-codelist"/>
       </Annotations>
       <Annotations Target="ProcessorService.Urgency/name">
         <Annotation Term="Common.Label" String="{i18n>Name}"/>
@@ -550,6 +558,7 @@
             </Record>
           </Collection>
         </Annotation>
+        <Annotation Term="Core.Description" String="Aspect for a code list with name and description&#xA;&#xA;See https://cap.cloud.sap/docs/cds/common#aspect-codelist"/>
       </Annotations>
       <Annotations Target="ProcessorService.Status/name">
         <Annotation Term="Common.Label" String="{i18n>Name}"/>
@@ -587,6 +596,9 @@
             </Record>
           </Collection>
         </Annotation>
+      </Annotations>
+      <Annotations Target="ProcessorService.Addresses">
+        <Annotation Term="Core.Description" String="Aspect to capture changes by user and name&#xA;&#xA;See https://cap.cloud.sap/docs/cds/common#aspect-managed"/>
       </Annotations>
       <Annotations Target="ProcessorService.Addresses/ID">
         <Annotation Term="Core.ComputedDefaultValue" Bool="true"/>
@@ -707,6 +719,7 @@
       </Annotations>
       <Annotations Target="ProcessorService.Urgency_texts/locale">
         <Annotation Term="Common.Label" String="{i18n>LanguageCode}"/>
+        <Annotation Term="Core.Description" String="Type for a language code"/>
       </Annotations>
       <Annotations Target="ProcessorService.Urgency_texts/name">
         <Annotation Term="Common.Label" String="{i18n>Name}"/>
@@ -734,6 +747,7 @@
       </Annotations>
       <Annotations Target="ProcessorService.Status_texts/locale">
         <Annotation Term="Common.Label" String="{i18n>LanguageCode}"/>
+        <Annotation Term="Core.Description" String="Type for a language code"/>
       </Annotations>
       <Annotations Target="ProcessorService.Status_texts/name">
         <Annotation Term="Common.Label" String="{i18n>Name}"/>
