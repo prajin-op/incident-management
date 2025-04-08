@@ -8,6 +8,9 @@
     "@cap-js/sqlite": "^1",
     "@sap/cds-dk": "^8.8.0"
   },
+  "scripts": {
+    "cds-build": "npm install --include=dev && cds build --production"
+  },
   "sapux": [
     "app/incidents"
   ],
